@@ -25,6 +25,8 @@ setInterval(() => {
     if (h > 12) {
         h = h - 12;
     } 
+    // when time is 12 AM then it will show 0 for 24H system. Here is convert it into 12 by below code
+    h == 0 ? h = 12 : '' ;
     
     // add zero before single digit number
     h = (h < 10) ? "0" + h: h;
